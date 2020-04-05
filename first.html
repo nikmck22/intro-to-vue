@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  <button v-on:click="changeMessage()">Click here for the answer</button>
+  Type in your guess here: <input type="text" v-model="message">
+  </div>
+  <!-- <script src="index.js"></script> -->
+</body>
+</html>
+
+<script>
+  var app = new Vue({
+  el: "#app",
+  data: {
+    message: "What did the buffalo say to his kid before he went off to college?",
+},
+  methods: {
+    changeMessage: function() {
+      console.log('here is the answer');
+      this.message = 'Bison';
+    }
+  }
+});
+
+</script>
